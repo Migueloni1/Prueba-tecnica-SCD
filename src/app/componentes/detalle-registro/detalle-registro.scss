@@ -1,0 +1,18 @@
+.detalle-pagina { max-width: 760px; margin: 0 auto; }
+.enlace-volver { color: #5c7cfa; font-size: .9rem; text-decoration: none; }
+.encabezado-detalle { align-items: end; display: flex; justify-content: space-between; gap: 1rem; margin: 1.75rem 0 2rem; }
+.texto-etiqueta { color: #5c7cfa; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.titulo-pagina { color: #102a43; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.04em; margin: 0; }
+.tarjeta { background: #fff; border: 1px solid #e6edf2; border-radius: 1rem; box-shadow: 0 8px 24px rgba(16, 42, 67, .06); }
+.detalle { display: grid; grid-template-columns: 1fr 1fr; gap: 0; overflow: hidden; }
+.dato { border-bottom: 1px solid #e6edf2; padding: 1.5rem; }
+.dato:nth-last-child(-n+2) { border-bottom: 0; }
+.dato span:first-child { color: #829ab1; display: block; font-size: .75rem; font-weight: 700; margin-bottom: .5rem; text-transform: uppercase; }
+.dato strong { color: #243b53; font-size: 1rem; }
+.dato-amplio { grid-column: span 2; }
+.estado { background: #e3fcef; border-radius: 999px; color: #147d64; font-size: .75rem; padding: .35rem .6rem; }
+.estado-inactivo { background: #f0f4f8; color: #627d98; }
+.estado-carga { color: #829ab1; padding: 4rem; text-align: center; }
+.estado-carga p { margin: .75rem 0 0; }
+.btn-primario { background: #102a43; border: 0; color: #fff; font-weight: 700; padding: .7rem 1rem; }
+@media (max-width: 600px) { .encabezado-detalle { align-items: start; flex-direction: column; } .detalle { grid-template-columns: 1fr; } .dato-amplio { grid-column: auto; } .dato:nth-last-child(-n+2) { border-bottom: 1px solid #e6edf2; } .dato:last-child { border-bottom: 0; } }

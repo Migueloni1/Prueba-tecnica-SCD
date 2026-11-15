@@ -1,0 +1,50 @@
+<section class="formulario-pagina">
+  <a routerLink="/" class="enlace-volver">← Volver a registros</a>
+  <div class="encabezado-formulario">
+    <p class="texto-etiqueta mb-2">{{ modoEdicion ? 'Edición' : 'Nuevo registro' }}</p>
+    <h1 class="titulo-pagina">{{ modoEdicion ? 'Editar registro' : 'Crear registro' }}</h1>
+    <p class="texto-intro">{{ modoEdicion ? 'Actualiza los datos del registro.' : 'Completa la información para añadir un registro.' }}</p>
+  </div>
+
+  @if (mensajeError) { <div class="alert alert-danger" role="alert">{{ mensajeError }}</div> }
+  @if (cargando) {
+    <div class="tarjeta estado-carga"><div class="spinner-border text-primary" role="status"></div><p>Cargando información...</p></div>
+  } @else {
+    <form class="tarjeta formulario" [formGroup]="formulario" (ngSubmit)="guardar()" novalidate>
+      <div class="fila-formulario">
+        <div class="campo">
+          <label for="fecha">Fecha <span>*</span></label>
+          <input id="fecha" type="date" class="form-control" formControlName="fecha" [class.is-invalid]="campoInvalido('fecha')">
+          @if (campoInvalido('fecha')) { <div class="invalid-feedback">Indica una fecha válida.</div> }
+          <small>Se guardará con formato dd-mm-yyyy.</small>
+        </div>
+        <div class="campo">
+          <label for="cantidad">Cantidad entera <span>*</span></label>
+          <input id="cantidad" type="number" step="1" min="0" class="form-control" formControlName="cantidad" [class.is-invalid]="campoInvalido('cantidad')">
+          @if (campoInvalido('cantidad')) { <div class="invalid-feedback">Indica un entero igual o mayor que 0.</div> }
+        </div>
+      </div>
+      <div class="campo">
+        <label for="descripcion">Descripción <span>*</span></label>
+        <textarea id="descripcion" rows="4" maxlength="200" class="form-control" formControlName="descripcion" [class.is-invalid]="campoInvalido('descripcion')"></textarea>
+        <div class="d-flex justify-content-between"><small>Máximo 200 caracteres.</small><small>{{ formulario.controls.descripcion.value.length }}/200</small></div>
+        @if (campoInvalido('descripcion')) { <div class="invalid-feedback">La descripción es obligatoria, debe incluir texto y no puede superar 200 caracteres.</div> }
+      </div>
+      <div class="fila-formulario">
+        <div class="campo">
+          <label for="importe">Importe decimal <span>*</span></label>
+          <div class="input-group"><span class="input-group-text">$</span><input id="importe" type="number" min="0" step="0.01" class="form-control" formControlName="importe" [class.is-invalid]="campoInvalido('importe')"></div>
+          @if (campoInvalido('importe')) { <div class="invalid-feedback d-block">Indica un importe igual o mayor que 0.</div> }
+        </div>
+        <div class="campo campo-switch">
+          <label for="activo">Estado</label>
+          <div class="form-check form-switch"><input id="activo" class="form-check-input" type="checkbox" formControlName="activo"><label class="form-check-label" for="activo">{{ formulario.controls.activo.value ? 'Activo' : 'Inactivo' }}</label></div>
+        </div>
+      </div>
+      <div class="acciones-formulario">
+        <a class="btn btn-reforzado" routerLink="/">Cancelar</a>
+        <button class="btn btn-primario" type="submit" [disabled]="guardando">{{ guardando ? 'Guardando...' : (modoEdicion ? 'Guardar cambios' : 'Crear registro') }}</button>
+      </div>
+    </form>
+  }
+</section>

@@ -1,0 +1,24 @@
+.formulario-pagina { max-width: 760px; margin: 0 auto; }
+.enlace-volver { color: #5c7cfa; font-size: .9rem; text-decoration: none; }
+.encabezado-formulario { margin: 1.75rem 0 2rem; }
+.texto-etiqueta { color: #5c7cfa; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.titulo-pagina { color: #102a43; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.04em; margin: 0; }
+.texto-intro { color: #627d98; margin: .5rem 0 0; }
+.tarjeta { background: #fff; border: 1px solid #e6edf2; border-radius: 1rem; box-shadow: 0 8px 24px rgba(16, 42, 67, .06); }
+.formulario { padding: clamp(1.25rem, 4vw, 2.25rem); }
+.fila-formulario { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.campo { margin-bottom: 1.25rem; }
+.campo label { color: #334e68; display: block; font-size: .9rem; font-weight: 700; margin-bottom: .45rem; }
+.campo label span { color: #dc3545; }
+.campo small { color: #829ab1; display: block; font-size: .78rem; margin-top: .35rem; }
+.form-control, .input-group-text { border-color: #d9e2ec; padding: .7rem .8rem; }
+.form-control:focus { border-color: #5c7cfa; box-shadow: 0 0 0 .2rem rgba(92, 124, 250, .14); }
+.campo-switch { align-self: center; }
+.form-check-input:checked { background-color: #5c7cfa; border-color: #5c7cfa; }
+.acciones-formulario { border-top: 1px solid #e6edf2; display: flex; justify-content: flex-end; gap: .75rem; padding-top: 1.5rem; }
+.btn-primario { background: #102a43; border: 0; color: #fff; font-weight: 700; padding: .7rem 1rem; }
+.btn-primario:hover { background: #243b53; color: #c8f169; }
+.btn-reforzado { border: 1px solid #d9e2ec; color: #334e68; background: #fff; }
+.estado-carga { color: #829ab1; padding: 4rem; text-align: center; }
+.estado-carga p { margin: .75rem 0 0; }
+@media (max-width: 600px) { .fila-formulario { grid-template-columns: 1fr; gap: 0; } }

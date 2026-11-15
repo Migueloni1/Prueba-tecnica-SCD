@@ -1,0 +1,25 @@
+.encabezado-pagina { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 2rem; }
+.texto-etiqueta { color: #5c7cfa; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.titulo-pagina { color: #102a43; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.04em; margin: 0; }
+.texto-intro { color: #627d98; margin: .5rem 0 0; }
+.btn-primario { background: #102a43; border: 0; color: #fff; font-weight: 700; padding: .7rem 1rem; }
+.btn-primario:hover { background: #243b53; color: #c8f169; }
+.tarjeta { background: #fff; border: 1px solid #e6edf2; border-radius: 1rem; box-shadow: 0 8px 24px rgba(16, 42, 67, .06); }
+.tabla-cabecera { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid #e6edf2; }
+.texto-suave { color: #829ab1; font-size: .85rem; }
+.btn-reforzado, .btn-accion { border: 1px solid #d9e2ec; color: #334e68; background: #fff; }
+.btn-accion { margin-left: .25rem; }
+.btn-accion:hover { border-color: #5c7cfa; color: #5c7cfa; }
+.btn-eliminar:hover { border-color: #dc3545; color: #dc3545; }
+th { color: #829ab1; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+td { color: #334e68; font-size: .9rem; }
+.descripcion { max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.estado { background: #e3fcef; border-radius: 999px; color: #147d64; font-size: .75rem; font-weight: 700; padding: .35rem .6rem; }
+.estado-inactivo { background: #f0f4f8; color: #627d98; }
+.estado-vacio { color: #829ab1; padding: 4rem 1rem; text-align: center; }
+.icono-vacio { font-size: 2rem; margin-bottom: .75rem; }
+.estado-vacio p { margin: .35rem 0 0; }
+.modal-fondo { background: rgba(16, 42, 67, .55); inset: 0; position: fixed; z-index: 1050; display: grid; place-items: center; padding: 1rem; }
+.modal-contenido { background: #fff; border-radius: 1rem; max-width: 400px; padding: 2rem; text-align: center; width: 100%; }
+.icono-alerta { background: #fff4e5; border-radius: 50%; color: #d97706; font-size: 1.2rem; font-weight: 800; margin: 0 auto 1rem; padding: .55rem; width: 2.5rem; }
+@media (max-width: 768px) { .encabezado-pagina { align-items: start; flex-direction: column; } .acciones { min-width: 180px; } }

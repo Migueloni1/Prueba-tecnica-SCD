@@ -1,0 +1,28 @@
+{
+  "registros": [
+    {
+      "id": 1,
+      "fecha": "12-11-2026",
+      "descripcion": "Implementación del módulo de seguimiento de proyectos para el equipo comercial.",
+      "cantidad": 12,
+      "importe": 1450.5,
+      "activo": true
+    },
+    {
+      "id": 2,
+      "fecha": "05-11-2026",
+      "descripcion": "Revisión y actualización de documentación técnica del producto.",
+      "cantidad": 4,
+      "importe": 380.75,
+      "activo": false
+    },
+    {
+      "id": 3,
+      "fecha": "28-10-2026",
+      "descripcion": "Capacitación interna sobre buenas prácticas de desarrollo frontend.",
+      "cantidad": 8,
+      "importe": 920,
+      "activo": true
+    }
+  ]
+}

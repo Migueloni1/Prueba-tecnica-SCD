@@ -1,0 +1,17 @@
+@use 'bootstrap/scss/bootstrap';
+
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #243b53;
+  background: #f7f9fc;
+}
+
+body {
+  background: #f7f9fc;
+  margin: 0;
+}
+
+button,
+a {
+  transition: all .2s ease;
+}

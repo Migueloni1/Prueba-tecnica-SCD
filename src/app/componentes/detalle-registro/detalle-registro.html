@@ -1,0 +1,20 @@
+<section class="detalle-pagina">
+  <a routerLink="/" class="enlace-volver">← Volver a registros</a>
+  @if (cargando) {
+    <div class="estado-carga"><div class="spinner-border text-primary" role="status"></div><p>Cargando información...</p></div>
+  } @else if (mensajeError) {
+    <div class="alert alert-danger mt-4">{{ mensajeError }}</div>
+  } @else if (registro) {
+    <div class="encabezado-detalle">
+      <div><p class="texto-etiqueta mb-2">Detalle del registro</p><h1 class="titulo-pagina">Registro #{{ registro.id }}</h1></div>
+      <a class="btn btn-primario" [routerLink]="['/editar', registro.id]">Editar registro</a>
+    </div>
+    <div class="tarjeta detalle">
+      <div class="dato"><span>Fecha</span><strong>{{ registro.fecha }}</strong></div>
+      <div class="dato dato-amplio"><span>Descripción</span><strong>{{ registro.descripcion }}</strong></div>
+      <div class="dato"><span>Cantidad</span><strong>{{ registro.cantidad }}</strong></div>
+      <div class="dato"><span>Importe</span><strong>{{ registro.importe | number:'1.2-2':'es-CL' }}</strong></div>
+      <div class="dato"><span>Estado</span><strong><span class="estado" [class.estado-inactivo]="!registro.activo">{{ registro.activo ? 'Activo' : 'Inactivo' }}</span></strong></div>
+    </div>
+  }
+</section>

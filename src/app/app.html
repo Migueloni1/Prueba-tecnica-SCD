@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark barra-navegacion">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+      <span class="marca-icono">S</span>
+      <span>Gestión de registros</span>
+    </a>
+    <button class="navbar-toggler" type="button" aria-controls="menuPrincipal" [attr.aria-expanded]="menuAbierto"
+      aria-label="Mostrar navegación" (click)="alternarMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="menuPrincipal" class="collapse navbar-collapse" [class.show]="menuAbierto">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="activo" (click)="cerrarMenu()"
+            [routerLinkActiveOptions]="{ exact: true }">Registros</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-lima btn-sm px-3" routerLink="/nuevo" (click)="cerrarMenu()">Nuevo registro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4 py-lg-5">
+  <router-outlet />
+</main>
+
+<footer class="container pb-4 text-center texto-suave">
+  Gestión de registros · {{ anioActual }}
+</footer>

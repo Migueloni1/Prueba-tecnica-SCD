@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.barra-navegacion {
+  background: #102a43;
+  box-shadow: 0 2px 12px rgba(16, 42, 67, 0.18);
+}
+
+.marca-icono {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.6rem;
+  background: #c8f169;
+  color: #102a43;
+  font-weight: 800;
+}
+
+.nav-link.activo {
+  color: #c8f169 !important;
+}
+
+.btn-lima {
+  background: #c8f169;
+  color: #102a43;
+  border: 0;
+  font-weight: 700;
+}
+
+.btn-lima:hover,
+.btn-lima:focus {
+  background: #b6df5d;
+  color: #102a43;
+}
+
+.texto-suave {
+  color: #829ab1;
+  font-size: 0.85rem;
+}
